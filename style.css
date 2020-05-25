@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+
+body {
+  height: 100vh;
+}
+.container {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+#task-container {
+    margin-top: 100px;
+    background-color: #4c7b81;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+}
+
+/* Horizontal dots */
+.dots {
+    text-align: center;
+}
+.dot{
+    height: 7px;
+    width: 7px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+h1 {
+    font-size: 3rem;
+    padding:0;
+    margin: 10px 0 5px 0;
+    text-align: center;
+    color: #FBB13C;
+    /* font-family: 'Sonsie One'; */
+    font-family: 'Ruslan Display', cursive;
+}
+p {
+    display: inline;
+    padding: 0;
+    margin:0;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 18px;
+}
+
+/* List and list content*/
+ul {
+    list-style: none;
+    padding:0;
+    margin-top: 20px;
+}
+ul li {
+    background-color: white;
+    color: #4c7b81;
+    border-radius: 5px;
+    margin: 5px;
+
+    display: grid;
+    grid-template-columns: 30px auto 50px;
+    grid-gap: 5px;
+    padding: 10px;
+}
+.true {
+    text-decoration: line-through;
+}
+.col-3 {
+    margin-left: auto;
+}
+
+
+/* Input fields */
+#new-task {
+    padding: 10px !important;
+}
+.input-container {
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+.input-container input {
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 18px;
+    color: #4c7b81;
+}
+input[type=text] {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 18px;
+    color: #4c7b81;
+    border: 0;
+}
+input::placeholder {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 18px;
+    color: #4c7b81;
+}
+input:focus {
+    outline: none;
+}
+
+/* Buttons */
+#add-button {
+    background-color: #FBB13C;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 18px;
+    color: #4c7b81;
+}
+button:hover {
+    cursor: pointer;
+}
+.delete-button {
+    width: 16px;
+    height: 16px;
+}
+.delete-button:hover {
+    cursor: pointer;
+}
+.save-button {
+    position: absolute;
+    background-color: #FBB13C;
+    border: 0;
+    border-radius: 5px;
+    margin-top: -4px;
+    padding: 5px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 18px;
+    color: #4c7b81;
+}
+
+
+/* Checkbox */
+label {
+  position: relative;
+  cursor: pointer;
+}
+label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+label span {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+  }
+label:hover span {
+    background-color: #ccc;
+  }
+label input:checked ~ span {
+background-color: #4c7b81;
+}
+/* The check symbol not visible when not checked */
+span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the check symbol when checked */
+label input:checked ~ span:after {
+  display: block;
+}
+
+/* Check symbol */
+label span:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4c7b81;
+    color: white;
+    text-align: center;    
+    color: white;    
+    font-size: 14px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 100px;
+    }
+    #task-container {
+        margin-top: 10px;        
+    }
+  }
